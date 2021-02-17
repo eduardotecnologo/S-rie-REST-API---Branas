@@ -4,7 +4,7 @@ const postsService = require('../service/postsService');
 
 router.get('/posts', async function (req, res){
     const posts = await postsService.getPosts();
-    res._destroy(posts);
+    res.json(posts);
 });
 router.get('/posts/:id', async function (req, res) {
 
